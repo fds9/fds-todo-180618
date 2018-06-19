@@ -12,15 +12,13 @@ class App extends Component {
     return (
       <PageProvider>
         <UserProvider>
-          <TodoProvider>
-            <PageConsumer>
-              {value => value.page === 'login' ? (
-                <LoginPage />
-              ) : (
-                <TodoPage />
-              )}
-            </PageConsumer>
-          </TodoProvider>
+          <PageConsumer>
+            {value => value.page === 'login' ? (
+              <LoginPage />
+            ) : (
+              <TodoPage />
+            )}
+          </PageConsumer>
         </UserProvider>
       </PageProvider>
     )
