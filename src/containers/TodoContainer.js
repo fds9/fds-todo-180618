@@ -21,7 +21,7 @@ export default class TodoContainer extends React.Component {
                 onTodoDelete={deleteTodo}
                 onTodoBodyUpdate={updateTodoBody}
               />
-              )}
+            )}
           </div>
         )}
       </TodoConsumer>
