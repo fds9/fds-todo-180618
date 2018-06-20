@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 
 import TodoPage from './pages/TodoPage'
 import LoginPage from './pages/LoginPage'
-
+import withAuth from './hocs/withAuth';
 import {UserProvider} from './contexts/UserContext';
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
       <BrowserRouter>
         <UserProvider>
           <Route path="/login" component={LoginPage} />
-          <Route path="/todo" render={() => <TodoPage title="My Title" />} />
+          <Route path="/todo" render={() => <TodoPageWithAuth title="My Title" />} />
           <Route exact path="/" component={Home} />
         </UserProvider>
       </BrowserRouter>

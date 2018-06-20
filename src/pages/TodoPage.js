@@ -17,4 +17,4 @@ class TodoPage extends Component {
   }
 }
 
-export default withAuth(TodoPage);
+export default withAuth('/login')(TodoPage);
