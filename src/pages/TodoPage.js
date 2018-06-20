@@ -3,11 +3,13 @@ import React, { Component } from "react"; // 노드 모듈스 안에 라이브�
 import TodoContainer from '../containers/TodoContainer';
 import {TodoProvider} from '../contexts/TodoContext';
 import LogoutButtonContainer from '../containers/LogoutButtonContainer';
+import withAuth from '../hocs/withAuth';
 
-export default class TodoPage extends Component {
+class TodoPage extends Component {
   render() {
     return (
       <TodoProvider>
+        <h1>{this.props.title}</h1>
         <TodoContainer />
         <LogoutButtonContainer />
       </TodoProvider>
@@ -15,4 +17,4 @@ export default class TodoPage extends Component {
   }
 }
 
-
+export default withAuth(TodoPage);
