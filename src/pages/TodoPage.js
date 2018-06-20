@@ -6,6 +6,9 @@ import LogoutButtonContainer from '../containers/LogoutButtonContainer';
 import withAuth from '../hocs/withAuth';
 
 class TodoPage extends Component {
+  static defaultProps = {
+    title: 'My Title'
+  }
   render() {
     return (
       <TodoProvider>
